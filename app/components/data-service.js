@@ -25,6 +25,12 @@ angular.module('myApp')
             received: 2500,
             text: "!!!",
             isNew: 0
+        }, {
+            image: "images/ya.jpg",
+            name: "Boss",
+            received: 2500,
+            text: "?!",
+            isNew: 1
         }];
 
         var tasks = [{

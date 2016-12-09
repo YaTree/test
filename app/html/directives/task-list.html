@@ -1,18 +1,18 @@
-<div class="scroll">
-    <div class="list">
-            <div class="title-holder">
-                <label class="title-list">
-                    {{tittleList}}
-                </label>
-                <label class="circle-blue">
-                    {{dataService.openTasks}}
-                </label>
-                <label class="circle-red">
-                    {{dataService.failedTasks}}
-                </label>
-            </div>
-            <div>
-                <div user-task some-object="{{object}} " ng-repeat="object in objectList"></div>
-            </div>
+<div class="form">
+    <div class="title-holder">
+        <label class="title-list">
+            {{tittleList}}
+        </label>
+        <label class="circle-blue">
+            {{dataService.openTasks}}
+        </label>
+        <label class="circle-red">
+            {{dataService.failedTasks}}
+        </label>
+    </div>
+    <div class="scroll">
+        <div class="list">
+            <div user-task some-object="{{object}} " ng-repeat="object in objectList"></div>
+        </div>
     </div>
 </div>
