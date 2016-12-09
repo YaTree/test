@@ -1,0 +1,15 @@
+<div class="scroll">
+    <div class="list">
+            <div class="title-holder">
+                <label class="title-list">
+                {{tittleList}}
+                </label>
+                <label class="circle-blue" ng-if="dataService.count > 0">
+                    {{dataService.count}}
+                </label>
+            </div>
+            <div>
+                <div user-message some-object="{{object}} " ng-repeat="object in objectList"></div>
+            </div>
+    </div>
+</div>

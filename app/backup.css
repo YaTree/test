@@ -1,0 +1,207 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 12px/1 'Montserrat', sans-serif;
+    color: #333;
+    background: #0E1A35;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+}
+
+.sidebar {
+    position: absolute;
+    width: 180px;
+}
+
+.content {
+    flex: 1;
+    padding: 19px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    transform: translate3d(0,0,0);
+    transition: transform .3s;
+}
+
+.content.isOpen {
+    transform: translate3d(180px,0,0);
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:before {
+    content: '\f0c9';
+    font: 18px fontawesome;
+}
+
+.search:before {
+    content: '\f002';
+    font: 18px fontawesome;
+}
+
+/* Demo Navigation */
+
+.title {
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #eee;
+    border-bottom: 1px solid #222;
+    background: #0E1A35;
+    height: 60px;
+    position: relative;
+
+}
+
+.title p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav li a {
+    position: relative;
+    display: block;
+    padding: 15px 15px 15px 50px;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 1px solid #222;
+}
+
+.nav li a:before {
+    font: 14px fontawesome;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+.nav li:nth-child(1) a:before { content: '\f015'; }
+.nav li:nth-child(2) a:before { content: '\f0ae'; }
+.nav li:nth-child(3) a:before { content: '\f201'; }
+.nav li:nth-child(4) a:before { content: '\f073'; }
+.nav li:nth-child(5) a:before { content: '\f007'; }
+.nav li:nth-child(6) a:before { content: '\f085'; }
+
+
+
+.nav li a:hover {
+    background: #122143;
+}
+
+.nav li a.active {
+    box-shadow: inset 5px 0 0 #2F4C95, inset 6px 0 0 #222;
+    background: #122143;
+}
+
+
+.message:before {
+    content: '\f0e0';
+    font: 18px fontawesome;
+}
+
+
+.bell:before {
+    content: '\f0f3';
+    font: 18px fontawesome;
+}
+
+*.icon-blue {color: #0088cc}
+
+.bell {
+    width:43px;
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+}
+.badge:after{
+    content:"3";
+    position: absolute;
+    background: rgba(0,0,255,1);
+    height:12px;
+    top:-2px;
+    right:9px;
+    width:12px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 9px;
+    border-radius: 50%;
+    color:white;
+    border:1px solid white;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    float: right;
+
+}
+
+header {
+    height: 100%;
+    background-color: white;
+}
+
+
+main,
+article,
+nav,
+aside {
+
+    box-sizing: border-box
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+nav,
+aside {
+    flex: 0 0 180px;
+    transition: all 0.3s ease
+}
+
+nav {
+    min-width: 180px;
+    max-width: 180px;
+}
+/* Checkbox hack to toggle nav visibility */
+
+input:checked ~ nav {
+    transform: translateX(0);
+    flex: 1;
+}
+input ~ nav {
+    transform: translateX(-180px);
+    flex: 0;
+    width: 0px;
+}
+input:checked ~ article {
+    flex: 2;
+}
+input ~ article {
+    flex: 3;
+}

@@ -1,0 +1,15 @@
+<div class="scroll">
+    <div class="list">
+            <div class="title-holder">
+                <label class="title-list">
+                    {{tittleList}}
+                </label>
+                <label class="circle-blue">
+                    {{dataService.activityCount}}
+                </label>
+            </div>
+            <div>
+                <div user-activity some-object="{{object}} " ng-repeat="object in objectList"></div>
+            </div>
+    </div>
+</div>
