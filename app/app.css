@@ -68,7 +68,7 @@ body {
   color: #eee;
   border-bottom: 1px solid #222;
   background: #0E1A35;
-  height: 60px;
+  height: 80px;
   position: relative;
 }
 
@@ -150,8 +150,8 @@ body {
 .avatar {
   margin-left: 20px;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
   float: right;
 
 }
@@ -167,7 +167,7 @@ input {
 
 header {
   display: flex;
-  height: 60px;
+  height: 80px;
   border-color: #2F4C95;
   align-items: center;
   width: 100%
@@ -185,7 +185,7 @@ header::after {
   background: #5584FF;
   color: rgba(0, 0, 0, 0.55);
   text-align: center;
-  font: bold 1.28em/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: bold 1.28em/30px 'Montserrat', sans-serif;
   border-radius: 40px;
 }
 

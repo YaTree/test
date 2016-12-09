@@ -1,97 +1,102 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="directives.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="directives.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="mainController">
 
 <div class='wrapper'>
-  <div class='sidebar'>
-    <div class='title'>
-      <p>Merkury</p>
-    </div>
-    <ul class='nav'>
-      <li>
-        <a class='active'>Home</a>
-      </li>
-      <li>
-        <a>Workflow</a>
-      </li>
-      <li>
-        <a >Statistic</a>
-      </li>
-      <li>
-        <a>Calendar</a>
-      </li>
-      <li>
-        <a>Users</a>
-      </li>
-      <li>
-        <a>Settings</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class='content' ng-class="{'isOpen': active == true}">
-    <div class="container">
-    <header>
-
-      <a class='button' ng-click="openMenu()"></a>
-      <i class='search'></i>
-      <input class="search">
-      <a class="add-button right">Add project</a>
-      <i class='message right' right></i>
-      <i class='bell icon-grey badge right'></i>
-      <img class="avatar right" src='http://res.cloudinary.com/dmpdhoctp/image/upload/c_crop,g_face/v1476130991/oqp6pp2rksum04eb75oc.jpg'>
-      <!--<i class='fa fa-bell '></i>-->
-
-    </header>  </div>
-    <article>
-      <div class="container">
-      <p class="pheader">Hello John!</p>
-        <div class="chart-board">
-          <chart-builder title="Your Sales" src="images/chart4.png" class="one-part"></chart-builder>
-          <chart-builder title="Report" src="images/chart2.png" class="two-part"></chart-builder>
+    <div class='sidebar'>
+        <div class='title'>
+            <p>Merkury</p>
         </div>
-      <div class="message-board">
-        <task-list tittle-list="Tasks"></task-list>
-        <message-list tittle-list="Messages"></message-list>
-        <activity-list tittle-list="Activity"></activity-list>
-      </div>
-      </div>
-    </article>
+        <ul class='nav'>
+            <li>
+                <a class='active'>Home</a>
+            </li>
+            <li>
+                <a>Workflow</a>
+            </li>
+            <li>
+                <a>Statistic</a>
+            </li>
+            <li>
+                <a>Calendar</a>
+            </li>
+            <li>
+                <a>Users</a>
+            </li>
+            <li>
+                <a>Settings</a>
+            </li>
+        </ul>
+    </div>
 
-  </div>
+    <div class='content' ng-class="{'isOpen': active == true}">
+        <div class="container">
+            <header>
+
+                <a class='button' ng-click="openMenu()"></a>
+                <i class='search'></i>
+                <input class="search">
+                <a class="add-button right">Add project</a>
+                <i class='message right' right></i>
+                <i class='bell icon-grey badge right'></i>
+                <img class="avatar right"
+                     src='images/ya.jpg'>
+
+            </header>
+        </div>
+        <article>
+            <div class="container">
+                <p class="pheader">Hello John!</p>
+                <div class="chart-board">
+                    <chart-builder title="Your Sales" src="images/chart4.png" class="one-part"></chart-builder>
+                    <chart-builder title="Report" src="images/chart2.png" class="two-part"></chart-builder>
+                </div>
+                <div class="message-board">
+                    <task-list tittle-list="Tasks"></task-list>
+                    <message-list tittle-list="Messages"></message-list>
+                    <activity-list tittle-list="Activity"></activity-list>
+                </div>
+            </div>
+        </article>
+
+    </div>
 </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
 
-  <script src="components/controller.js"></script>
-  <script src="components/data-service.js"></script>
-  <script src="components/directives/message-list.js"></script>
-  <script src="components/directives/user-message.js"></script>
-  <script src="components/directives/task-list.js"></script>
-  <script src="components/directives/user-task.js"></script>
-  <script src="components/directives/activity-list.js"></script>
-  <script src="components/directives/user-activity.js"></script>
-  <script src="components/directives/chart-builder.js"></script>
+<script src="components/controller.js"></script>
+<script src="components/data-service.js"></script>
+<script src="components/directives/message-list.js"></script>
+<script src="components/directives/user-message.js"></script>
+<script src="components/directives/task-list.js"></script>
+<script src="components/directives/user-task.js"></script>
+<script src="components/directives/activity-list.js"></script>
+<script src="components/directives/user-activity.js"></script>
+<script src="components/directives/chart-builder.js"></script>
 
 </body>
 </html>

@@ -2,31 +2,30 @@
 angular.module('myApp')
     .factory("dataService", function () {
         var messages = [{
-            image: "http://res.cloudinary.com/dmpdhoctp/image/upload/c_crop,g_face/v1476130991/oqp6pp2rksum04eb75oc.jpg",
+            image: "images/ya.jpg",
             name: "John Smith",
             received: 5,
             text: "Hello, This is John!",
             isNew: 1
         }, {
-            image: "http://res.cloudinary.com/dmpdhoctp/image/upload/c_crop,g_face/v1476130991/oqp6pp2rksum04eb75oc.jpg",
+            image: "images/ya.jpg",
             name: "Mika Root",
             received: 15,
             text: "I have something",
             isNew: 1
         }, {
-            image: "http://res.cloudinary.com/dmpdhoctp/image/upload/c_crop,g_face/v1476130991/oqp6pp2rksum04eb75oc.jpg",
+            image: "images/ya.jpg",
             name: "Samuel",
             received: 75,
             text: "No!",
             isNew: 0
         }, {
-            image: "http://res.cloudinary.com/dmpdhoctp/image/upload/c_crop,g_face/v1476130991/oqp6pp2rksum04eb75oc.jpg",
+            image: "images/ya.jpg",
             name: "Boss",
             received: 2500,
             text: "!!!",
             isNew: 0
         }];
-
 
         var tasks = [{
             image: "images/Letter-F-blue-icon.png",
@@ -59,7 +58,6 @@ angular.module('myApp')
             left: 5,
             isFinished: 0
         }];
-
 
         var activitys = [{
             image: "images/ya.jpg",
