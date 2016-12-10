@@ -23,7 +23,7 @@
 
 .title-holder {
     height:50px;
-    padding-top: 10px;
+    padding-top: 12px;
     border-bottom: 2px solid #cccccc;
 }
 
@@ -52,6 +52,7 @@
 .reply:before {
     content: '\f112';
     font: 14px fontawesome;
+    margin-right: 5px;
 }
 
 .settings:before {

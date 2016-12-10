@@ -183,7 +183,7 @@ header::after {
   height: 30px;
   width: 125px;
   background: #5584FF;
-  color: rgba(0, 0, 0, 0.55);
+  color: #fff;
   text-align: center;
   font: bold 1.28em/30px 'Montserrat', sans-serif;
   border-radius: 40px;
@@ -194,7 +194,7 @@ a.button2 {
 }
 
 a.add-button:hover {
-  background: #3d7a80;
+  background: #122143;
 }
 
 article {

@@ -6,7 +6,7 @@ angular.module('myApp')
         return {
             restrict: 'E',
             scope: {
-                tittleList: "@"
+                titleList: "@"
             },
             templateUrl: 'html/directives/activity-list.html',
             controller: function ($scope, $rootScope, $element) {
