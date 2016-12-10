@@ -132,12 +132,12 @@
 
 message-list {
     flex-grow: 1;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 task-list {
     flex-grow: 1;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 activity-list {
@@ -181,7 +181,7 @@ activity-list {
 
 .one-part {
     flex-grow: 1;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .two-part {

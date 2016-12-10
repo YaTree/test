@@ -203,26 +203,26 @@ article {
 }
 
 .container {
-  width:  calc(100% - 200px);
+  width:  calc(100% - 210px);
 }
 
 .pheader {
   font-size: 26px;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
 
 .message-board {
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .chart-board {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-left: 30px;
+  padding-top: 30px;
 }
