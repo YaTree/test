@@ -26,7 +26,6 @@ body {
 }
 
 .sidebar {
-  /*position: absolute;*/
   min-width: 180px;
   max-width: 200px;
   height: auto;
@@ -43,12 +42,9 @@ body {
   flex: 1;
   background: white;
   box-shadow: 0 0 5px rgba(0,0,0,1);
-  /*transform: translate3d(0,0,0);
-  transition: transform .3s;*/
 }
 
 .sidebar.isCollapsed {
-  /*transform: translate3d(180px,0,0);*/
   display: none;
 }
 
@@ -176,8 +172,6 @@ body {
   border-radius: 50%;
   height: 32px;
   width: 32px;
-  float: right;
-
 }
 
 .avatar-arrow:before {
@@ -249,16 +243,7 @@ article {
   color: #0e1a35;
 }
 
-.message-board {
-  display: flex;
-  flex-flow: row wrap;
-  padding-left: 30px;
-  padding-top: 30px;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
-.chart-board {
+.row-board {
   display: flex;
   flex-flow: row wrap;
   padding-left: 30px;

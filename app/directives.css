@@ -8,6 +8,7 @@
     width: 100%;
     height: 99%;
     overflow-y: scroll;
+
     position: absolute;
 }
 
@@ -127,7 +128,6 @@
     margin-left: -10px;
 }
 
-
 .task-directive {
     border-bottom: 1px solid #cccccc;
     padding-left: 20px;
@@ -189,7 +189,6 @@ activity-list {
     height: 100%;
     display: flex;
     position:relative;
-
 }
 
 .directive-image-activity {
@@ -201,13 +200,13 @@ activity-list {
     align-self: center;
 }
 
-.one-part {
+.piechart {
     flex: 1 0 calc(33% - 30px);
     margin-left: 30px;
     margin-top:  30px;
 }
 
-.two-part {
+.graph {
     flex: 2 0 calc(50% - 30px);
     margin-left: 30px;
     margin-top:  30px;
@@ -239,10 +238,8 @@ activity-list {
 }
 
 .chart-image {
-    
     height: 250px;
     padding: 20px;
-
 }
 
 .chart-content {
@@ -273,4 +270,12 @@ option {
     border-radius: 20px;
     border: 1px solid #cccccc;
     padding: 6px;
+}
+
+
+
+/* For IE */
+@media all and (-ms-high-contrast:none) {
+    .piechart, task-list, activity-list, message-list { flex: 1 0 auto } /* IE10 */
+    .graph { flex: 2 0 auto }
 }
