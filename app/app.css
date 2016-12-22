@@ -52,6 +52,20 @@ body {
   display: none;
 }
 
+.menu-arrow-open:before {
+  content: '\f0d9';
+  font: 12px fontawesome;
+  color: #5584FF;
+  margin-right: 3px;
+}
+
+.menu-arrow-close:before {
+  content: '\f0da';
+  font: 12px fontawesome;
+  color: #5584FF;
+  margin-right: 3px;
+}
+
 .button {
   cursor: pointer;
 }
@@ -144,14 +158,14 @@ body {
 .badge:after{
   content:"3";
   position: absolute;
-  background: rgba(0,0,255,1);
+  background: #5584FF;
   height:12px;
   top:-3px;
   right:9px;
   width:12px;
   text-align: center;
   line-height: 10px;
-  font-size: 9px;
+  font-size: 8px;
   border-radius: 50%;
   color:white;
   border:1px solid white;
@@ -164,6 +178,12 @@ body {
   width: 32px;
   float: right;
 
+}
+
+.avatar-arrow:before {
+  content: '\f0d7';
+  margin-left: 3px;
+  font: 12px fontawesome;
 }
 
 input {
@@ -232,16 +252,17 @@ article {
 .message-board {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   padding-left: 30px;
   padding-top: 30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .chart-board {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
   padding-left: 30px;
   padding-top: 30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }

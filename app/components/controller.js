@@ -10,8 +10,14 @@
                 console.log('Running Main Controller!');
 
                 $scope.active = true;
+                $scope.arrowClass = 'menu-arrow-open';
                 $scope.openMenu = function () {
                     $scope.active = !$scope.active;
+                    if ($scope.active) {
+                        $scope.arrowClass = 'menu-arrow-open'
+                    } else {
+                        $scope.arrowClass = 'menu-arrow-close'
+                    }
                 };
             }]
         );

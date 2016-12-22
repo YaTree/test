@@ -21,9 +21,10 @@
 </head>
 <body ng-controller="mainController">
 <div class="big-wrapper">
-<div class='sidebar' ng-class="{'isCollapsed': active == false}">
+    <div class='sidebar' ng-class="{'isCollapsed': active == false}">
         <div class='title'>
-            <img src="images/logo.png" /><p>Merkury</p>
+            <img src="images/logo.png"/>
+            <p>Merkury</p>
         </div>
         <ul class='nav'>
             <li>
@@ -46,39 +47,41 @@
             </li>
         </ul>
     </div>
-<div class='wrapper'>
-    <div class='content'>
-        <div class="container">
-            <header>
-
-                <a class='button' ng-click="openMenu()"></a>
-                <i class='search' id="loop"></i>
-                <input class="search" id="input-search">
-                <a class="add-button right">+ Add project</a>
-                <i class='message right' right></i>
-                <i class='bell icon-grey badge right'></i>
-                <img class="avatar right"
-                     src='images/ya.jpg'>
-
-            </header>
-        </div>
-        <article>
+    <div class='wrapper'>
+        <div class='content'>
             <div class="container">
-                <p class="pheader">Hello John!</p>
-                <div class="chart-board">
-                    <chart-builder title="Your Sales" src="images/piechart1.png" class="one-part"></chart-builder>
-                    <chart-builder title="Report" src="images/graph.png" class="two-part"></chart-builder>
-                </div>
-                <div class="message-board">
-                    <task-list title-list="Tasks"></task-list>
-                    <message-list title-list="Messages"></message-list>
-                    <activity-list title-list="Activity"></activity-list>
-                </div>
-            </div>
-        </article>
+                <header>
+                    <i class='{{arrowClass}}'></i>
+                    <a class='button' ng-click="openMenu()"></a>
+                    <i class='search' id="loop"></i>
+                    <input class="search" id="input-search">
+                    <a class="add-button right">+ Add project</a>
+                    <i class='message right' right></i>
+                    <i class='bell icon-grey badge right'></i>
+                    <img class="avatar right"
+                         src='images/ya.jpg'>
+                    <i class='avatar-arrow right'></i>
 
+                </header>
+            </div>
+            <article>
+
+                <div class="container">
+                    <p class="pheader">Hello John!</p>
+                    <div class="chart-board">
+                        <chart-builder title="Your Sales" src="images/piechart1.png" class="one-part"></chart-builder>
+                        <chart-builder title="Report" src="images/graph.png" class="two-part"></chart-builder>
+                    </div>
+                    <div class="message-board">
+                        <task-list title-list="Tasks"></task-list>
+                        <message-list title-list="Messages"></message-list>
+                        <activity-list title-list="Activity"></activity-list>
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </div>
-</div>
 </div>
 
 <!-- In production use:
@@ -99,9 +102,9 @@
 <script src="components/directives/user-activity.js"></script>
 <script src="components/directives/chart-builder.js"></script>
 <script>
-$( "#loop" ).click(function() {
-  $( "#input-search" ).focus();
-});
+    $("#loop").click(function () {
+        $("#input-search").focus();
+    });
 </script>
 
 </body>

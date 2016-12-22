@@ -32,9 +32,16 @@
 }
 
 .title-holder {
-    height:50px;
-    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     border-bottom: 2px solid #cccccc;
+}
+.title-holder::after {
+    content: '';
+    flex-grow: 1;
+    order: 0;
+
 }
 
 .title-list {
@@ -116,7 +123,8 @@
     text-align: center;
     font-size: 18px;
     float: right;
-    margin-right: 5px;
+    margin-right: 20px;
+    margin-left: -10px;
 }
 
 
@@ -142,20 +150,21 @@
 }
 
 message-list {
-   flex-grow: 1;
-   margin: 0 50px 15px 0;
-   max-width: 45%;
+    flex: 1 0 calc(25% - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 task-list {
-    flex-grow: 1;
-    margin: 0 50px 15px 0;
-	max-width: 45%;
+   flex: 1 0 calc(25% - 30px);
+   margin-left: 30px;
+   margin-top: 30px;
 }
 
 activity-list {
-    flex-grow: 1;
-	max-width: 45%;
+    flex: 1 0 calc(25% - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .activity-directive {
@@ -193,15 +202,15 @@ activity-list {
 }
 
 .one-part {
-    flex-grow: 1;
-    margin: 0 30px 15px 0;
-	max-width: 400px;
+    flex: 1 0 calc(33% - 30px);
+    margin-left: 30px;
+    margin-top:  30px;
 }
 
 .two-part {
-    flex-grow: 2;
-	margin: 0 0 15px 0;
-	max-width: 600px;
+    flex: 2 0 calc(50% - 30px);
+    margin-left: 30px;
+    margin-top:  30px;
 }
 
 .char-title {

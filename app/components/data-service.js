@@ -2,31 +2,31 @@
 angular.module('myApp')
     .factory("dataService", function () {
         var messages = [{
-            image: "images/ya.jpg",
+            image: "images/john.jpg",
             name: "John Smith",
             received: 5,
             text: "Hello, This is John!",
             isNew: 1
         }, {
             image: "images/ya.jpg",
-            name: "Mika Root",
+            name: "Me",
             received: 15,
             text: "I have something",
             isNew: 1
         }, {
             image: "images/ya.jpg",
-            name: "Samuel",
+            name: "Me",
             received: 75,
             text: "No!",
             isNew: 0
         }, {
-            image: "images/ya.jpg",
+            image: "images/boss.jpg",
             name: "Boss",
             received: 2500,
             text: "!!!",
             isNew: 0
         }, {
-            image: "images/ya.jpg",
+            image: "images/boss.jpg",
             name: "Boss",
             received: 2500,
             text: "?!",
@@ -34,75 +34,75 @@ angular.module('myApp')
         }];
 
         var tasks = [{
-            image: "images/Letter-F-blue-icon.png",
+            image: "images/ficon.jpg",
             title: "New website",
-            delay: 5,
+            delay: 5*60*25,
             left: 0,
             isFinished: 0
         }, {
-            image: "images/Letter-A-blue-icon.png",
+            image: "images/nicon.jpg",
             title: "Free business",
-            delay: 2,
+            delay: 2*60*25,
             left: 0,
             isFinished: 0
         }, {
-            image: "images/Letter-J-blue-icon.png",
+            image: "images/ficon.jpg",
             title: "New logo",
             delay: 0,
-            left: 1,
+            left: 1*60*25,
             isFinished: 0
         }, {
-            image: "images/Letter-F-blue-icon.png",
+            image: "images/nicon.jpg",
             title: "Free Icons Set",
             delay: 0,
-            left: 2,
+            left: 2*60*25,
             isFinished: 0
         }, {
-            image: "images/Letter-F-blue-icon.png",
+            image: "images/ficon.jpg",
             title: "Free Icons Set 2",
             delay: 0,
-            left: 5,
+            left: 5*60*25,
             isFinished: 0
         }];
 
         var activitys = [{
-            image: "images/ya.jpg",
+            image: "images/john.jpg",
             who: "John",
             action: "added a new project",
             what: "Free Ux",
             when: 1
         }, {
-            image: "images/Letter-F-blue-icon.png",
-            who: "Sam",
+            image: "images/boss.jpg",
+            who: "Boss",
             action: "deleted project",
             what: "Bank",
             when: 5
         }, {
-            image: "images/ya.jpg",
+            image: "images/rita.jpg",
             who: "Rita",
             action: "created task",
             what: "Add function to",
             when: 25
         }, {
-            image: "images/Letter-J-blue-icon.png",
+            image: "images/john.jpg",
             who: "John",
             action: "added",
             what: "AAA",
             when: 70
         }, {
-            image: "images/ya.jpg",
+            image: "images/rita.jpg",
             who: "Rita",
             action: "deleted",
             what: "Bbbb",
             when: 2400
         }, {
-            image: "images/Letter-J-blue-icon.png",
+            image: "images/boss.jpg",
             who: "Boss",
             action: "created",
             what: "aaaaa",
             when: 2500
         }, {
-            image: "images/Letter-A-blue-icon.png",
+            image: "images/boss.jpg",
             who: "Boss",
             action: "created",
             what: "Company",
@@ -167,12 +167,22 @@ angular.module('myApp')
             }
 
             if (mins > 60 * 24) {
-                return parseInt(mins / (60 * 24)) + " day(s) ago";
+                return checkForOne(parseInt(mins / (60 * 24)), 'day');
             }
 
             if (mins > 60) {
-                return parseInt(mins / 60) + " hour(s) ago";
+                return checkForOne(parseInt(mins / 60), 'hour');
             }
+        }
+
+        function checkForOne(num, period) {
+
+            if (num == 1) {
+                return "1 " + period +" ago";
+            }
+
+            return num + " " + period +"s ago";
+
         }
 
         return {

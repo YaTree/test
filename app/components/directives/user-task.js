@@ -17,9 +17,10 @@ angular.module('myApp')
 
                 if (parseInt(object["delay"]) > 0) {
                     $scope.failed = true;
-                    $scope.taskState = object["delay"] + " day(s) delay";
+                    $scope.taskState = dataService.timeLeftFromMin( object["delay"] );
+
                 } else {
-                    $scope.taskState = object["left"] + " day(s) left";
+                    $scope.taskState = dataService.timeLeftFromMin( object["left"] );
                 }
             }
         }
