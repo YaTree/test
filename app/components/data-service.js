@@ -23,13 +23,13 @@ angular.module('myApp')
             image: "images/boss.jpg",
             name: "Boss",
             received: 2500,
-            text: "!!!",
+            text: "Hope, you are..",
             isNew: 0
         }, {
             image: "images/boss.jpg",
             name: "Boss",
             received: 2500,
-            text: "?!",
+            text: "Where are you?!",
             isNew: 1
         }];
 
@@ -87,19 +87,19 @@ angular.module('myApp')
             image: "images/john.jpg",
             who: "John",
             action: "added",
-            what: "AAA",
+            what: "Task1",
             when: 70
         }, {
             image: "images/rita.jpg",
             who: "Rita",
             action: "deleted",
-            what: "Bbbb",
+            what: "Task1",
             when: 2400
         }, {
             image: "images/boss.jpg",
             who: "Boss",
             action: "created",
-            what: "aaaaa",
+            what: "Task2",
             when: 2500
         }, {
             image: "images/boss.jpg",
