@@ -18,34 +18,42 @@ body {
   font: 12px/1 'Montserrat', sans-serif;
   color: #333;
   background: #0E1A35;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .wrapper {
-  display: flex;
-  min-height: 100%;
+  width: 100%;
 }
 
 .sidebar {
-  position: absolute;
-  width: 180px;
+  /*position: absolute;*/
+  min-width: 180px;
+  max-width: 200px;
+  height: auto;
+}
+
+.big-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	
 }
 
 .content {
   flex: 1;
   background: white;
   box-shadow: 0 0 5px rgba(0,0,0,1);
-  transform: translate3d(0,0,0);
-  transition: transform .3s;
+  /*transform: translate3d(0,0,0);
+  transition: transform .3s;*/
 }
 
-.content.isOpen {
-  transform: translate3d(180px,0,0);
+.sidebar.isCollapsed {
+  /*transform: translate3d(180px,0,0);*/
+  display: none;
 }
 
 .button {
   cursor: pointer;
-  margin-left: 20px;
 }
 
 .button:before {
@@ -61,10 +69,9 @@ body {
 
 .title {
   font-size: 16px;
-  line-height: 50px;
+  padding-top: 25px;
   text-align: center;
   text-transform: uppercase;
-
   color: #eee;
   border-bottom: 1px solid #222;
   background: #0E1A35;
@@ -73,10 +80,12 @@ body {
 }
 
 .title p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: inline-block;  
+}
+
+.title img {
+	width: 30px;
+	margin-right: 10px;
 }
 
 .nav li a {
@@ -93,6 +102,7 @@ body {
   position: absolute;
   top: 14px;
   left: 20px;
+  color: #5384ff;
 }
 
 .nav li:nth-child(1) a:before { content: '\f015'; }
@@ -170,7 +180,8 @@ header {
   height: 80px;
   border-color: #2F4C95;
   align-items: center;
-  width: 100%
+  width: 100%;  
+  padding-left: 30px;
 }
 header::after {
   content: '';
@@ -181,7 +192,7 @@ header::after {
 .add-button {
   display: block;
   height: 30px;
-  width: 125px;
+  min-width: 125px;
   background: #5584FF;
   color: #fff;
   text-align: center;
@@ -203,17 +214,24 @@ article {
 }
 
 .container {
-  width:  calc(100% - 210px);
+  /*width:  calc(100% - 210px);*/
+  padding-right: 50px;
+}
+
+.container:last-child {  
+  padding-bottom: 50px;
 }
 
 .pheader {
   font-size: 26px;
   padding-top: 30px;
   padding-left: 30px;
+  color: #0e1a35;
 }
 
 .message-board {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding-left: 30px;
   padding-top: 30px;
@@ -221,6 +239,7 @@ article {
 
 .chart-board {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
