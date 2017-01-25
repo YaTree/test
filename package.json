@@ -20,10 +20,9 @@
     "postupdate-deps": "bower update",
 
     "prestart": "npm install",
-    "start": "http-server -a https://gentle-reef-25413.herokuapp.com/ -p 8000 -c-1 ./app",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
 
     "pretest": "npm install",
-
 
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
